@@ -2,19 +2,22 @@
 # platform :ios, '9.0'
 
 target 'testObjc' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+    pod 'FSPagerView'
+    pod 'SnapKit'
+    pod 'Masonry'
 
-  # Pods for testObjc
-
-  target 'testObjcTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'testObjcUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    # Pods for testObjc
+    
+    target 'testObjcTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'testObjcUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
 end
