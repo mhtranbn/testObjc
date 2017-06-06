@@ -1,4 +1,4 @@
-//
+ //
 //  PKIPDetailMemberListViewController.m
 //  testObjc
 //
@@ -9,15 +9,16 @@
 #import "PKIPDetailMemberListViewController.h"
 #import "Masonry.h"
 #import "PagerCellCustom.h"
+#import "PKIZoomVC.h"
+
 @interface PKIPDetailMemberListViewController ()
 @end
-
 @implementation PKIPDetailMemberListViewController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self setUpView];
 }
 
 -(void)setUpView {
@@ -32,12 +33,12 @@
         make.height.mas_equalTo(60);
     }];
     [self.tableView registerNib:[UINib nibWithNibName:@"PagerCellCustom" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PagerCellCustom"];
-    imagesArray = [[NSMutableArray alloc] init];
+    _imagesArray = [[NSMutableArray alloc] init];
     for (int index = 0; index < 7; index ++ ) {
         UIImageView *image;
         image = [[UIImageView alloc] init];
         image.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",index]];
-        [imagesArray addObject:image];
+        [_imagesArray addObject:image];
 
     }
 
@@ -66,8 +67,10 @@
         cell = (PagerCellCustom *)[[PagerCellCustom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
 
     }
-    [cell setImageArray:imagesArray];
-    
+    [cell setImageArray:_imagesArray];
+    [cell setDidTapImageBlock:^(NSInteger index){
+        [self tapImage:index];
+    }];
     return cell;
 }
 
@@ -76,25 +79,23 @@
 }
 
 -(void)tapImage:(NSInteger)index{
-    
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Click"
-                                 message:[NSString stringWithFormat:@"You tapped on index %ld",index]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    //Handle your yes please button action here
-                                }];
-    [alert addAction:yesButton];
-        [self presentViewController:alert animated:YES completion:nil];
+    PKIZoomVC *controller = [[PKIZoomVC alloc] initWithNibName:@"PKIZoomVC" bundle:nil];
+    [controller setData:[NSString stringWithFormat:@"%ld.jpg ",(long)index] :[NSString stringWithFormat:@"%ld / %ld ",(long)index,(long)_imagesArray.count]];
+    [self.navigationController pushViewController:controller animated:NO];
+
 }
+
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [self setUpView];
+    [self.tableView reloadData];
 }
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[(PagerCellCustom *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] nst_Timer] invalidate];
+}
+
 
 @end

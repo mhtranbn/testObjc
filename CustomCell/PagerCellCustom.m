@@ -37,7 +37,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -45,7 +45,7 @@
               reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-
+        
     }
     return self;
 }
@@ -108,9 +108,11 @@
 #pragma mark - RSlideView Delegate
 
 - (void)RSlideView:(RSlideView *)_slideView tapOnPageAtIndex:(NSInteger)index
-
+//show popup[ herre
 {
-    
+    if (self.didTapImageBlock){
+        self.didTapImageBlock(index);
+    }
 }
 
 - (IBAction)onPrev:(id)sender

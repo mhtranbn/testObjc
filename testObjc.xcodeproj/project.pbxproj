@@ -17,6 +17,10 @@
 		322EBEC41EE64FFA00E9291D /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 322EBEBD1EE64FFA00E9291D /* 4.jpg */; };
 		322EBEC51EE64FFA00E9291D /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 322EBEBE1EE64FFA00E9291D /* 5.jpg */; };
 		322EBEC61EE64FFA00E9291D /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 322EBEBF1EE64FFA00E9291D /* 6.jpg */; };
+		322EBED01EE6890000E9291D /* PKIZoomPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 322EBECF1EE6890000E9291D /* PKIZoomPopUp.m */; };
+		322EBED21EE6896A00E9291D /* PKIZoomPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322EBED11EE6896A00E9291D /* PKIZoomPopUp.xib */; };
+		322EBF061EE6A8B200E9291D /* PKIZoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 322EBF051EE6A8B200E9291D /* PKIZoomVC.m */; };
+		322EBF081EE6A93700E9291D /* PKIZoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322EBF071EE6A93700E9291D /* PKIZoomVC.xib */; };
 		32DD36CD1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */; };
 		32DD36CE1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */; };
 		32DD36D31EE54E7800EE8F0D /* NaviCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36D21EE54E7800EE8F0D /* NaviCustom.m */; };
@@ -67,6 +71,12 @@
 		322EBEBD1EE64FFA00E9291D /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		322EBEBE1EE64FFA00E9291D /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		322EBEBF1EE64FFA00E9291D /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		322EBECE1EE6890000E9291D /* PKIZoomPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIZoomPopUp.h; sourceTree = "<group>"; };
+		322EBECF1EE6890000E9291D /* PKIZoomPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIZoomPopUp.m; sourceTree = "<group>"; };
+		322EBED11EE6896A00E9291D /* PKIZoomPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIZoomPopUp.xib; sourceTree = "<group>"; };
+		322EBF041EE6A8B200E9291D /* PKIZoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIZoomVC.h; sourceTree = "<group>"; };
+		322EBF051EE6A8B200E9291D /* PKIZoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIZoomVC.m; sourceTree = "<group>"; };
+		322EBF071EE6A93700E9291D /* PKIZoomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIZoomVC.xib; sourceTree = "<group>"; };
 		32DD36CA1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIPDetailMemberListViewController.h; sourceTree = "<group>"; };
 		32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIPDetailMemberListViewController.m; sourceTree = "<group>"; };
 		32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIPDetailMemberListViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +158,33 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		322EBECD1EE688D400E9291D /* CustomPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				322EBECE1EE6890000E9291D /* PKIZoomPopUp.h */,
+				322EBECF1EE6890000E9291D /* PKIZoomPopUp.m */,
+				322EBED11EE6896A00E9291D /* PKIZoomPopUp.xib */,
+			);
+			path = CustomPopUp;
+			sourceTree = "<group>";
+		};
+		322EBF011EE6A87C00E9291D /* PKIZoomVC */ = {
+			isa = PBXGroup;
+			children = (
+				322EBF041EE6A8B200E9291D /* PKIZoomVC.h */,
+				322EBF051EE6A8B200E9291D /* PKIZoomVC.m */,
+				322EBF071EE6A93700E9291D /* PKIZoomVC.xib */,
+			);
+			path = PKIZoomVC;
+			sourceTree = "<group>";
+		};
+		322EBF091EE6B01C00E9291D /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		32BB3F541EE56E6C00F39535 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +249,13 @@
 		32E42F411EE0321E00C66F31 = {
 			isa = PBXGroup;
 			children = (
+				322EBF091EE6B01C00E9291D /* Modal */,
+				322EBECD1EE688D400E9291D /* CustomPopUp */,
 				32BB3F5A1EE571A200F39535 /* Library */,
 				32BB3F541EE56E6C00F39535 /* CustomCell */,
 				32DD36D71EE55AB000EE8F0D /* Utitlity */,
 				32DD36D01EE54E0A00EE8F0D /* NaviCustom */,
+				322EBF011EE6A87C00E9291D /* PKIZoomVC */,
 				32DD36C41EE5450600EE8F0D /* PagerVC */,
 				32DD36B51EE543BC00EE8F0D /* Resource */,
 				32E42F4C1EE0321E00C66F31 /* testObjc */,
@@ -413,6 +453,8 @@
 				322EBEC31EE64FFA00E9291D /* 3.jpg in Resources */,
 				322EBEC01EE64FFA00E9291D /* 0.jpg in Resources */,
 				322EBEC11EE64FFA00E9291D /* 1.jpg in Resources */,
+				322EBF081EE6A93700E9291D /* PKIZoomVC.xib in Resources */,
+				322EBED21EE6896A00E9291D /* PKIZoomPopUp.xib in Resources */,
 				322EBEC21EE64FFA00E9291D /* 2.jpg in Resources */,
 				32DD36D51EE54E8800EE8F0D /* NaviCustom.xib in Resources */,
 				32DD36CE1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib in Resources */,
@@ -584,9 +626,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E42F551EE0321E00C66F31 /* ViewController.m in Sources */,
+				322EBF061EE6A8B200E9291D /* PKIZoomVC.m in Sources */,
 				32DD36CD1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m in Sources */,
 				32DD36D31EE54E7800EE8F0D /* NaviCustom.m in Sources */,
 				322EBEB31EE6461D00E9291D /* PagerCellCustom.m in Sources */,
+				322EBED01EE6890000E9291D /* PKIZoomPopUp.m in Sources */,
 				32E42F521EE0321E00C66F31 /* AppDelegate.m in Sources */,
 				32E42F821EE0325700C66F31 /* Person.m in Sources */,
 				32E42F4F1EE0321E00C66F31 /* main.m in Sources */,

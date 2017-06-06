@@ -12,9 +12,9 @@
 @interface PKIPDetailMemberListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
     NaviCustom *naviCustom;
     NSArray *tableData;
-    NSMutableArray *imagesArray;
 
 }
+@property (strong, nonatomic) NSMutableArray *imagesArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

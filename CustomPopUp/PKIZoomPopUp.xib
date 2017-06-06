@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PKIZoomPopUp">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-KT-Ahb">
+                    <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Dgu-0o-H2Y"/>
+                        <constraint firstAttribute="height" constant="50" id="OAy-hp-yZ4"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal" image="ic_close_Zoom"/>
+                    <connections>
+                        <action selector="closeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="k2O-Np-n7c"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fsdfd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-GI-A6t">
+                    <rect key="frame" x="310" y="627" width="60" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="FvR-Ng-uMU"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Nwh-fp-9on"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfdsf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoP-Op-xl5">
+                    <rect key="frame" x="5" y="627" width="60" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="nj7-GO-wLG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qjr-zz-jZI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jxf-GI-A6t" secondAttribute="trailing" constant="5" id="JFX-Ld-QIL"/>
+                <constraint firstAttribute="trailing" secondItem="zAr-KT-Ahb" secondAttribute="trailing" id="TGp-Aq-Dzl"/>
+                <constraint firstItem="RoP-Op-xl5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="WBW-cm-oqB"/>
+                <constraint firstAttribute="bottom" secondItem="Jxf-GI-A6t" secondAttribute="bottom" constant="15" id="YYD-ir-zM2"/>
+                <constraint firstAttribute="bottom" secondItem="RoP-Op-xl5" secondAttribute="bottom" constant="15" id="dXa-W0-5wN"/>
+                <constraint firstItem="zAr-KT-Ahb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l1s-xd-Bgv"/>
+            </constraints>
+            <connections>
+                <outlet property="closeButton" destination="zAr-KT-Ahb" id="Ynb-Kt-mPR"/>
+                <outlet property="nameImage" destination="RoP-Op-xl5" id="RQg-uG-qOt"/>
+                <outlet property="numberImage" destination="Jxf-GI-A6t" id="gKP-29-taa"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close_Zoom" width="85" height="85"/>
+    </resources>
+</document>

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameImageLabel;
 @property (nonatomic,strong)NSTimer *nst_Timer;
 @property (weak, nonatomic) IBOutlet UILabel *numberImage;
+@property (copy, nonatomic) void (^didTapImageBlock)(NSInteger index);
+//- (void)setDidTapImageBLock:(void (^)())didTapImageBlock;
 -(NSMutableArray *)imagesArray;
 -(NSMutableArray *)setImageArray:(NSMutableArray *)newImageArray;
 @end
