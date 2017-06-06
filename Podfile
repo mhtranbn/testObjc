@@ -4,10 +4,10 @@
 target 'testObjc' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
-    pod 'FSPagerView'
+#    pod 'FSPagerView'
     pod 'SnapKit'
     pod 'Masonry'
-
+    pod 'MLeaksFinder'
     # Pods for testObjc
     
     target 'testObjcTests' do

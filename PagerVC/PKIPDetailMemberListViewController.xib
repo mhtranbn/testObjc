@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PKIPDetailMemberListViewController">
             <connections>
+                <outlet property="tableView" destination="VuZ-VD-xAU" id="XX4-pZ-Flr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,8 +24,8 @@
                     <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="YUO-Cg-udk"/>
-                        <outlet property="delegate" destination="-1" id="b1V-uu-gUQ"/>
+                        <outlet property="dataSource" destination="-1" id="6Ab-hL-YcX"/>
+                        <outlet property="delegate" destination="-1" id="DqM-Fo-MdR"/>
                     </connections>
                 </tableView>
             </subviews>

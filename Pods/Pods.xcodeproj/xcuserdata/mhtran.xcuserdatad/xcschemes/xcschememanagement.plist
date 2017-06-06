@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FSPagerView.xcscheme</key>
+		<key>FBRetainCycleDetector.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MLeaksFinder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6869A91AF92A5398FB0A2B8D307C6386</key>
+		<key>2C599305421E66F4BEB2D511DDA2DCD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E2FA521AA47B8DAEFB1D69DBDAAE90D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87004053810BCBF6F79846D45C28AB96</key>
+		<key>91F541E5F1DE0B681BB715AA43EE5D86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABCEED40D07E3AF72E474B568401AF97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED279AFE7EA745A57B7B9F35AD5F2C9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
