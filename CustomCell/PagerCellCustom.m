@@ -70,13 +70,6 @@
     return @"PagerCellCustom";
 }
 
-//- (void)viewDidLayoutSubviews
-//{
-//    [super viewDidLayoutSubviews];
-//    self.pageWidthSlider.maximumValue = self.view.bounds.size.width;
-//}
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations

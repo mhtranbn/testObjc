@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NaviCustom.h"
 
-@interface PKIPDetailMemberListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
+@interface PKIPDetailMemberListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource,NavicustomDelegate>{
     NaviCustom *naviCustom;
     NSArray *tableData;
 

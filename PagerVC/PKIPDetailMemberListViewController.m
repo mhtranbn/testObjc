@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "PagerCellCustom.h"
 #import "PKIZoomVC.h"
-
+#import "PKIListImageVC.h"
 @interface PKIPDetailMemberListViewController ()
 @end
 @implementation PKIPDetailMemberListViewController
@@ -23,7 +23,9 @@
 
 -(void)setUpView {
     naviCustom = [[NaviCustom alloc] init];
-    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" andController:self];
+//    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" andController:self];
+    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" withSeconImage:@"ic_next" andController:self];
+    naviCustom.delegate = self;
     [self.view addSubview:naviCustom];
     naviCustom.translatesAutoresizingMaskIntoConstraints = NO;
     [naviCustom mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -42,6 +44,13 @@
 
     }
 
+}
+
+//MARK: NaviCustomDelegate
+
+- (void)secondNaviCustomDidPress {
+    PKIListImageVC *controller = [[PKIListImageVC alloc] initWithNibName:@"PKIListImageVC" bundle:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
