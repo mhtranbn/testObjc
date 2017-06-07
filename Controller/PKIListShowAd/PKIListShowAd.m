@@ -40,7 +40,7 @@
         make.height.mas_equalTo(60);
     }];
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    
+    [self.tableView removeConstraints:self.tableView.constraints];
     NSString *pid = @"34816";//self.adDisplayInfo.pid;
     NSString *mid = @"135002";//self.adDisplayInfo.mid;
     NSString *sid = @"564743";//self.adDisplayInfo.sid;
@@ -57,14 +57,14 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.adsView setHidden:YES];
     UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 0, 0);
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(padding);
     }];
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 60, 0);
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 100, 0);
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(padding);
     }];
     [self setViewAnimate:self.adsView hidden:NO];
@@ -118,6 +118,14 @@
     [ads addClickFunction:self.imageAds];
     [ads addClickFunction:self.titleAdsLabel];
     [ads addClickFunction:self.descriptionAdsLabel];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 100, 0);
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(padding);
+    }];
 }
 
 @end

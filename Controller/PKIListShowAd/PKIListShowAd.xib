@@ -24,8 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AOU-xV-lrq">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AOU-xV-lrq">
                     <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Gxw-sR-rkh"/>
@@ -69,13 +70,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AOU-xV-lrq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="4U4-LF-eef"/>
                 <constraint firstItem="v35-Y5-Syx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Xn-ix-ZDQ"/>
                 <constraint firstAttribute="trailing" secondItem="v35-Y5-Syx" secondAttribute="trailing" id="H6e-bV-EG4"/>
                 <constraint firstAttribute="bottom" secondItem="v35-Y5-Syx" secondAttribute="bottom" id="PkX-Rj-6jG"/>
-                <constraint firstAttribute="bottom" secondItem="AOU-xV-lrq" secondAttribute="bottom" id="Xml-Ka-5pj"/>
-                <constraint firstAttribute="trailing" secondItem="AOU-xV-lrq" secondAttribute="trailing" id="m44-OT-h2m"/>
-                <constraint firstItem="AOU-xV-lrq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yow-sk-nFZ"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
