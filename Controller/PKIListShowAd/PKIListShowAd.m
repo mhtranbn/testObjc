@@ -13,6 +13,9 @@
 @interface PKIListShowAd ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *adsView;
+@property (weak, nonatomic) IBOutlet UILabel *titleAdsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionAdsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageAds;
 
 @end
 
@@ -37,6 +40,14 @@
         make.height.mas_equalTo(60);
     }];
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSString *pid = @"34816";//self.adDisplayInfo.pid;
+    NSString *mid = @"135002";//self.adDisplayInfo.mid;
+    NSString *sid = @"564743";//self.adDisplayInfo.sid;
+    [ImobileSdkAds registerWithPublisherID:pid MediaID:mid SpotID:sid];
+    [ImobileSdkAds setSpotDelegate:sid delegate:self];
+    [ImobileSdkAds startBySpotID:sid];
+    [ImobileSdkAds getNativeAdData:sid ViewController:self Delegate:self];
 }
 
 //MARK: NaviCustom Delegate
@@ -46,14 +57,14 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.adsView setHidden:YES];
     UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 0, 0);
-    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(padding);
     }];
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
     UIEdgeInsets padding = UIEdgeInsetsMake(60, 0, 60, 0);
-    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(padding);
     }];
     [self setViewAnimate:self.adsView hidden:NO];
@@ -76,7 +87,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 14;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,6 +97,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.textLabel.text = [[NSString alloc] initWithFormat:@"test PocketItem AR"];
     }
     
     return cell;
@@ -93,6 +105,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
+}
+
+#pragma mark - i-mobileデリゲードメソッド
+- (void)onNativeAdDataReciveCompleted:(NSString *)spotId nativeArray:(NSArray *)nativeArray{
+    ImobileSdkAdsNativeObject *ads = (ImobileSdkAdsNativeObject *)[nativeArray objectAtIndex:0];
+    self.titleAdsLabel.text = [ads getAdTitle];
+    self.descriptionAdsLabel.text = [ads getAdDescription];
+    [ads getAdImageCompleteHandler:^(UIImage *loadimg) {
+        self.imageAds.image = loadimg;
+    }];
+    [ads addClickFunction:self.imageAds];
+    [ads addClickFunction:self.titleAdsLabel];
+    [ads addClickFunction:self.descriptionAdsLabel];
 }
 
 @end

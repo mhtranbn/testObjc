@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NaviCustom.h"
-@interface PKIListShowAd : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+#import "AdDisplayInfo.h"
+#import <ImobileSdkAds/ImobileSdkAds.h>
+
+@interface PKIListShowAd : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,IMobileSdkAdsDelegate>
+@property (nonatomic) AdDisplayInfo *adDisplayInfo;
 - (void)setViewAnimate:(UIView *)view hidden:(BOOL)hidden ;
 
 @end

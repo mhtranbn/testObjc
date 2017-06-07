@@ -12,7 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PKIListShowAd">
             <connections>
                 <outlet property="adsView" destination="v35-Y5-Syx" id="k6L-gS-OEF"/>
+                <outlet property="descriptionAdsLabel" destination="Tvz-Mz-SzN" id="m5K-4c-sRk"/>
+                <outlet property="imageAds" destination="Cyt-j4-240" id="u74-ys-6Ap"/>
                 <outlet property="tableView" destination="AOU-xV-lrq" id="WmN-zS-kmK"/>
+                <outlet property="titleAdsLabel" destination="ox9-AX-in9" id="FuS-vz-TGu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,8 +34,35 @@
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v35-Y5-Syx">
                     <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-j4-240">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-AX-in9">
+                            <rect key="frame" x="5" y="5" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.42745098040000001" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvz-Mz-SzN">
+                            <rect key="frame" x="5" y="95" width="365" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.42745098040000001" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Cyt-j4-240" secondAttribute="trailing" id="0Xt-n7-sJW"/>
+                        <constraint firstItem="ox9-AX-in9" firstAttribute="top" secondItem="v35-Y5-Syx" secondAttribute="top" constant="5" id="6YR-hI-tMt"/>
+                        <constraint firstItem="Cyt-j4-240" firstAttribute="top" secondItem="v35-Y5-Syx" secondAttribute="top" id="BSb-c2-KuC"/>
+                        <constraint firstItem="Tvz-Mz-SzN" firstAttribute="leading" secondItem="ox9-AX-in9" secondAttribute="leading" id="KJC-HP-0IO"/>
+                        <constraint firstItem="ox9-AX-in9" firstAttribute="leading" secondItem="v35-Y5-Syx" secondAttribute="leading" constant="5" id="MCt-N3-har"/>
+                        <constraint firstAttribute="bottom" secondItem="Cyt-j4-240" secondAttribute="bottom" id="S5L-BS-r6y"/>
+                        <constraint firstAttribute="bottom" secondItem="Tvz-Mz-SzN" secondAttribute="bottom" constant="5" id="VTn-2s-FM1"/>
+                        <constraint firstItem="Cyt-j4-240" firstAttribute="leading" secondItem="v35-Y5-Syx" secondAttribute="leading" id="W5Q-ml-3EY"/>
+                        <constraint firstAttribute="trailing" secondItem="Tvz-Mz-SzN" secondAttribute="trailing" constant="5" id="e4F-MK-SGA"/>
                         <constraint firstAttribute="height" constant="100" id="i54-JP-Pjb"/>
                     </constraints>
                 </view>

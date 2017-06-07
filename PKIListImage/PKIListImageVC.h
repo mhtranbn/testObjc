@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NaviCustom.h"
+#import "AdDisplayInfo.h"
+#import <ImobileSdkAds/ImobileSdkAds.h>
 
-@interface PKIListImageVC : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,NavicustomDelegate>
+@interface PKIListImageVC : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,NavicustomDelegate,IMobileSdkAdsDelegate>
+@property (nonatomic) AdDisplayInfo *adDisplayInfo;
 
 @end

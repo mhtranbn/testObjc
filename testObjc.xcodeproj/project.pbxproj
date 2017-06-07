@@ -28,6 +28,11 @@
 		327005191EE7DD3100ADD6A4 /* PKIListShowAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 327005171EE7DD3100ADD6A4 /* PKIListShowAd.m */; };
 		3270051A1EE7DD3100ADD6A4 /* PKIListShowAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327005181EE7DD3100ADD6A4 /* PKIListShowAd.xib */; };
 		3270051D1EE7E6A000ADD6A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */; };
+		3270051F1EE7FA8100ADD6A4 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3270051E1EE7FA8100ADD6A4 /* ImobileSdkAds.framework */; };
+		327005231EE7FAC500ADD6A4 /* AdDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 327005221EE7FAC500ADD6A4 /* AdDisplayInfo.m */; };
+		327005261EE7FE6600ADD6A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327005251EE7FE6600ADD6A4 /* SystemConfiguration.framework */; };
+		327005281EE7FE7200ADD6A4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327005271EE7FE7200ADD6A4 /* AdSupport.framework */; };
+		3270052A1EE7FE7B00ADD6A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327005291EE7FE7B00ADD6A4 /* CoreLocation.framework */; };
 		32DD36CD1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */; };
 		32DD36CE1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */; };
 		32DD36D31EE54E7800EE8F0D /* NaviCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36D21EE54E7800EE8F0D /* NaviCustom.m */; };
@@ -94,6 +99,13 @@
 		327005171EE7DD3100ADD6A4 /* PKIListShowAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIListShowAd.m; sourceTree = "<group>"; };
 		327005181EE7DD3100ADD6A4 /* PKIListShowAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIListShowAd.xib; sourceTree = "<group>"; };
 		3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3270051E1EE7FA8100ADD6A4 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
+		327005211EE7FAC500ADD6A4 /* AdDisplayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdDisplayInfo.h; sourceTree = "<group>"; };
+		327005221EE7FAC500ADD6A4 /* AdDisplayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdDisplayInfo.m; sourceTree = "<group>"; };
+		327005241EE7FAF300ADD6A4 /* Imobile_spot_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Imobile_spot_info.h; sourceTree = "<group>"; };
+		327005251EE7FE6600ADD6A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		327005271EE7FE7200ADD6A4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		327005291EE7FE7B00ADD6A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		32DD36CA1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIPDetailMemberListViewController.h; sourceTree = "<group>"; };
 		32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIPDetailMemberListViewController.m; sourceTree = "<group>"; };
 		32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIPDetailMemberListViewController.xib; sourceTree = "<group>"; };
@@ -133,6 +145,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3270052A1EE7FE7B00ADD6A4 /* CoreLocation.framework in Frameworks */,
+				327005281EE7FE7200ADD6A4 /* AdSupport.framework in Frameworks */,
+				327005261EE7FE6600ADD6A4 /* SystemConfiguration.framework in Frameworks */,
+				3270051F1EE7FA8100ADD6A4 /* ImobileSdkAds.framework in Frameworks */,
 				3270051D1EE7E6A000ADD6A4 /* QuartzCore.framework in Frameworks */,
 				46F01D72BBC96E1F93292B46 /* Pods_testObjc.framework in Frameworks */,
 			);
@@ -160,6 +176,7 @@
 		19FDA7E4E59F37000FBDCCAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3270051E1EE7FA8100ADD6A4 /* ImobileSdkAds.framework */,
 				1D1308998119AAD326CC8BDC /* Pods_testObjc.framework */,
 				8DDD59981FA01589E1F5921A /* Pods_testObjcTests.framework */,
 				0E38F086447CA701124C7A7E /* Pods_testObjcUITests.framework */,
@@ -213,6 +230,8 @@
 		322EBF091EE6B01C00E9291D /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				327005241EE7FAF300ADD6A4 /* Imobile_spot_info.h */,
+				327005201EE7FAC100ADD6A4 /* AdDisplayInfo */,
 				32DD36D01EE54E0A00EE8F0D /* NaviCustom */,
 			);
 			path = Modal;
@@ -225,12 +244,14 @@
 				3270050F1EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.m */,
 				327005101EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.xib */,
 			);
-			path = PKIImageCollectionViewCell;
+			name = PKIImageCollectionViewCell;
+			path = ../CustomCell/PKIImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		327005131EE7DC7600ADD6A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3270050D1EE7B19800ADD6A4 /* PKIImageCollectionViewCell */,
 				32BB3F541EE56E6C00F39535 /* CustomCell */,
 				322EBECD1EE688D400E9291D /* CustomPopUp */,
 			);
@@ -261,15 +282,26 @@
 		3270051B1EE7E6A000ADD6A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				327005291EE7FE7B00ADD6A4 /* CoreLocation.framework */,
+				327005271EE7FE7200ADD6A4 /* AdSupport.framework */,
+				327005251EE7FE6600ADD6A4 /* SystemConfiguration.framework */,
 				3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		327005201EE7FAC100ADD6A4 /* AdDisplayInfo */ = {
+			isa = PBXGroup;
+			children = (
+				327005211EE7FAC500ADD6A4 /* AdDisplayInfo.h */,
+				327005221EE7FAC500ADD6A4 /* AdDisplayInfo.m */,
+			);
+			path = AdDisplayInfo;
+			sourceTree = "<group>";
+		};
 		32BB3F541EE56E6C00F39535 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				3270050D1EE7B19800ADD6A4 /* PKIImageCollectionViewCell */,
 				322EBEB01EE6461D00E9291D /* PagerCellCustom.h */,
 				322EBEB11EE6461D00E9291D /* PagerCellCustom.m */,
 				322EBEB21EE6461D00E9291D /* PagerCellCustom.xib */,
@@ -727,6 +759,7 @@
 				32E42F521EE0321E00C66F31 /* AppDelegate.m in Sources */,
 				32E42F821EE0325700C66F31 /* Person.m in Sources */,
 				327005111EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.m in Sources */,
+				327005231EE7FAC500ADD6A4 /* AdDisplayInfo.m in Sources */,
 				32E42F4F1EE0321E00C66F31 /* main.m in Sources */,
 				322EBEB81EE64E3700E9291D /* RSlideView.m in Sources */,
 				32DD36DC1EE55B9E00EE8F0D /* Generate.m in Sources */,
@@ -876,6 +909,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RMUJ39Q74V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = testObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mhtranbn.testObjc;
@@ -892,6 +929,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RMUJ39Q74V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = testObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mhtranbn.testObjc;

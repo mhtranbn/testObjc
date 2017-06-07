@@ -49,7 +49,7 @@
 
 - (IBAction)backAction:(UIButton *)sender {
     if (imageBack.image != nil) {
-            [controller.navigationController popViewControllerAnimated:YES];
+        [controller.navigationController popViewControllerAnimated:YES];
     }
 }
 

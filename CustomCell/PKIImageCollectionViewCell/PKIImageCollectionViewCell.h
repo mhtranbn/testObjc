@@ -11,5 +11,6 @@
 @interface PKIImageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameImageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageCollectionCell;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
