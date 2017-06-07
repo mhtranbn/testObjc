@@ -9,6 +9,8 @@
 #import "PKIListImageVC.h"
 #import "PKIImageCollectionViewCell.h"
 #import "Masonry.h"
+#import "PKIListShowAd.h"
+
 
 @interface PKIListImageVC ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -21,11 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpUI];
+
 }
 
 -(void)setUpUI {
     NaviCustom *naviCustom = [[NaviCustom alloc] init];
-    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" withSeconImage:@"next" andController:self];
+    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" withSeconImage:@"ic_next" andController:self];
+    [naviCustom setTitel:@"List Image"];
+    naviCustom.delegate = self;
     [self.view addSubview:naviCustom];
     naviCustom.translatesAutoresizingMaskIntoConstraints = NO;
     [naviCustom mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -36,6 +41,14 @@
     }];
     self.myImage = [UIImage imageNamed:@"2.jpg"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PKIImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PKIImageCollectionViewCell"];
+}
+
+//MARK: NaviCustom Delegate;
+
+- (void)secondNaviCustomDidPress{
+    PKIListShowAd *controller = [[PKIListShowAd alloc] initWithNibName:@"PKIListShowAd" bundle:nil];
+    [self.navigationController pushViewController:controller animated:YES];
+
 }
 
 //MARK : UICollectionViewDataSource

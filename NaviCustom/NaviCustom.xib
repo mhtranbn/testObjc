@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,12 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hP7-Mv-FWA">
                     <rect key="frame" x="323" y="15" width="50" height="32"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YT-BS-JFP">
+                    <rect key="frame" x="184" y="31.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.55437024111675126" green="0.53123800604013172" blue="0.33976727575320986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -54,6 +60,8 @@
                 <constraint firstItem="Zu4-c5-mZp" firstAttribute="centerY" secondItem="xIC-cb-voM" secondAttribute="centerY" id="6yQ-sS-iSf"/>
                 <constraint firstItem="Zu4-c5-mZp" firstAttribute="width" secondItem="xIC-cb-voM" secondAttribute="width" id="EuA-WY-Wjv"/>
                 <constraint firstAttribute="trailing" secondItem="bs9-jh-X15" secondAttribute="trailing" id="KqA-HQ-DLz"/>
+                <constraint firstItem="3YT-BS-JFP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PFv-ql-tDF"/>
+                <constraint firstItem="3YT-BS-JFP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WfM-Kd-qfL"/>
                 <constraint firstItem="Zu4-c5-mZp" firstAttribute="leading" secondItem="xIC-cb-voM" secondAttribute="leading" constant="-20" id="ZsW-Z3-158"/>
                 <constraint firstItem="X6h-4Z-V2i" firstAttribute="leading" secondItem="hP7-Mv-FWA" secondAttribute="leading" constant="-20" id="bOa-5D-lb1"/>
                 <constraint firstItem="X6h-4Z-V2i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bjx-8i-C4F"/>
@@ -72,6 +80,7 @@
                 <outlet property="imageBack" destination="Zu4-c5-mZp" id="lTi-fh-AzE"/>
                 <outlet property="imageSecond" destination="hP7-Mv-FWA" id="fKp-Ca-bu6"/>
                 <outlet property="secondButton" destination="X6h-4Z-V2i" id="c9w-vb-k1n"/>
+                <outlet property="titleLabel" destination="3YT-BS-JFP" id="gjt-1j-Mq7"/>
             </connections>
             <point key="canvasLocation" x="82" y="362"/>
         </view>

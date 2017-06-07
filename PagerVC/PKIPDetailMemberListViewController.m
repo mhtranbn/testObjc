@@ -23,9 +23,9 @@
 
 -(void)setUpView {
     naviCustom = [[NaviCustom alloc] init];
-//    [naviCustom setViewWithImage:nil withBackImage:@"ic_back" andController:self];
     [naviCustom setViewWithImage:nil withBackImage:@"ic_back" withSeconImage:@"ic_next" andController:self];
     naviCustom.delegate = self;
+    [naviCustom setTitel:@"List Member"];
     [self.view addSubview:naviCustom];
     naviCustom.translatesAutoresizingMaskIntoConstraints = NO;
     [naviCustom mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -23,11 +23,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageBack;
 @property (weak, nonatomic) IBOutlet UIImageView *imageSecond;
 @property (nonatomic, weak) UIViewController *controller;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic, weak) id<NavicustomDelegate>delegate;
 - (IBAction)backAction:(UIButton *)sender;
 - (IBAction)secondAction:(UIButton *)sender;
 
+- (void)setTitel:(NSString *)title;
 - (void) setViewWithImage:(NSString *) imageNameBackGround withBackImage:(NSString *) imageNameButtonBack andController:(UIViewController *)aController;
 - (void) setViewWithImage:(NSString *) imageNameBackGround withBackImage:(NSString *) imageNameButtonBack  withSeconImage:(NSString *) imageNameSecond andController:(UIViewController *)aController;
 @end

@@ -16,10 +16,15 @@
 @synthesize controller;
 @synthesize backgroundImage;
 @synthesize delegate;
+@synthesize titleLabel;
 
 - (instancetype)init {
     self = [[[NSBundle mainBundle]loadNibNamed:@"NaviCustom" owner:nil options:nil] objectAtIndex:0];
     return self;
+}
+
+-(void)setTitel:(NSString *)title{
+    titleLabel.text = title;
 }
 
 -(void)setViewWithImage:(NSString *)imageNameBackGround withBackImage:(NSString *)imageNameButtonBack andController:(UIViewController *)aController {
@@ -28,7 +33,6 @@
     [backgroundImage setImage:imageBackGround];
     UIImage *imageBackButton = [UIImage imageNamed:imageNameButtonBack];
     [imageBack setImage:imageBackButton];
-    
     
 }
 
@@ -45,16 +49,12 @@
 
 - (IBAction)backAction:(UIButton *)sender {
     if (imageBack.image != nil) {
-        if (self.delegate != nil) {
-            [delegate backNaviCustomDidPress];
-        } else {
             [controller.navigationController popViewControllerAnimated:YES];
-        }
     }
 }
 
 - (IBAction)secondAction:(UIButton *)sender {
-    if (imageBack.image != nil) {
+    if (imageSecond.image != nil) {
         if (self.delegate != nil) {
             [delegate secondNaviCustomDidPress];
         }

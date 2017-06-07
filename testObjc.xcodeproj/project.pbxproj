@@ -25,6 +25,9 @@
 		3270050C1EE7A6ED00ADD6A4 /* PKIListImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3270050A1EE7A6ED00ADD6A4 /* PKIListImageVC.xib */; };
 		327005111EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3270050F1EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.m */; };
 		327005121EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327005101EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.xib */; };
+		327005191EE7DD3100ADD6A4 /* PKIListShowAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 327005171EE7DD3100ADD6A4 /* PKIListShowAd.m */; };
+		3270051A1EE7DD3100ADD6A4 /* PKIListShowAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327005181EE7DD3100ADD6A4 /* PKIListShowAd.xib */; };
+		3270051D1EE7E6A000ADD6A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */; };
 		32DD36CD1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */; };
 		32DD36CE1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */; };
 		32DD36D31EE54E7800EE8F0D /* NaviCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD36D21EE54E7800EE8F0D /* NaviCustom.m */; };
@@ -87,6 +90,10 @@
 		3270050E1EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIImageCollectionViewCell.h; sourceTree = "<group>"; };
 		3270050F1EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIImageCollectionViewCell.m; sourceTree = "<group>"; };
 		327005101EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		327005161EE7DD3100ADD6A4 /* PKIListShowAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIListShowAd.h; sourceTree = "<group>"; };
+		327005171EE7DD3100ADD6A4 /* PKIListShowAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIListShowAd.m; sourceTree = "<group>"; };
+		327005181EE7DD3100ADD6A4 /* PKIListShowAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIListShowAd.xib; sourceTree = "<group>"; };
+		3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		32DD36CA1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKIPDetailMemberListViewController.h; sourceTree = "<group>"; };
 		32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKIPDetailMemberListViewController.m; sourceTree = "<group>"; };
 		32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PKIPDetailMemberListViewController.xib; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3270051D1EE7E6A000ADD6A4 /* QuartzCore.framework in Frameworks */,
 				46F01D72BBC96E1F93292B46 /* Pods_testObjc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +165,7 @@
 				0E38F086447CA701124C7A7E /* Pods_testObjcUITests.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		322408551EE79F5700F7D01D /* PKIListImage */ = {
@@ -166,7 +175,8 @@
 				327005091EE7A6ED00ADD6A4 /* PKIListImageVC.m */,
 				3270050A1EE7A6ED00ADD6A4 /* PKIListImageVC.xib */,
 			);
-			path = PKIListImage;
+			name = PKIListImage;
+			path = ../PKIListImage;
 			sourceTree = "<group>";
 		};
 		322EBEB51EE64E3700E9291D /* Classes */ = {
@@ -185,7 +195,8 @@
 				322EBECF1EE6890000E9291D /* PKIZoomPopUp.m */,
 				322EBED11EE6896A00E9291D /* PKIZoomPopUp.xib */,
 			);
-			path = CustomPopUp;
+			name = CustomPopUp;
+			path = ../CustomPopUp;
 			sourceTree = "<group>";
 		};
 		322EBF011EE6A87C00E9291D /* PKIZoomVC */ = {
@@ -195,12 +206,14 @@
 				322EBF051EE6A8B200E9291D /* PKIZoomVC.m */,
 				322EBF071EE6A93700E9291D /* PKIZoomVC.xib */,
 			);
-			path = PKIZoomVC;
+			name = PKIZoomVC;
+			path = ../PKIZoomVC;
 			sourceTree = "<group>";
 		};
 		322EBF091EE6B01C00E9291D /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				32DD36D01EE54E0A00EE8F0D /* NaviCustom */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -215,6 +228,44 @@
 			path = PKIImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		327005131EE7DC7600ADD6A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32BB3F541EE56E6C00F39535 /* CustomCell */,
+				322EBECD1EE688D400E9291D /* CustomPopUp */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		327005141EE7DC8500ADD6A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				327005151EE7DD1000ADD6A4 /* PKIListShowAd */,
+				322408551EE79F5700F7D01D /* PKIListImage */,
+				322EBF011EE6A87C00E9291D /* PKIZoomVC */,
+				32DD36C41EE5450600EE8F0D /* PagerVC */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		327005151EE7DD1000ADD6A4 /* PKIListShowAd */ = {
+			isa = PBXGroup;
+			children = (
+				327005161EE7DD3100ADD6A4 /* PKIListShowAd.h */,
+				327005171EE7DD3100ADD6A4 /* PKIListShowAd.m */,
+				327005181EE7DD3100ADD6A4 /* PKIListShowAd.xib */,
+			);
+			path = PKIListShowAd;
+			sourceTree = "<group>";
+		};
+		3270051B1EE7E6A000ADD6A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3270051C1EE7E6A000ADD6A4 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32BB3F541EE56E6C00F39535 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +274,8 @@
 				322EBEB11EE6461D00E9291D /* PagerCellCustom.m */,
 				322EBEB21EE6461D00E9291D /* PagerCellCustom.xib */,
 			);
-			path = CustomCell;
+			name = CustomCell;
+			path = ../CustomCell;
 			sourceTree = "<group>";
 		};
 		32BB3F5A1EE571A200F39535 /* Library */ = {
@@ -231,7 +283,8 @@
 			children = (
 				322EBEB51EE64E3700E9291D /* Classes */,
 			);
-			path = Library;
+			name = Library;
+			path = ../Library;
 			sourceTree = "<group>";
 		};
 		32DD36B51EE543BC00EE8F0D /* Resource */ = {
@@ -245,7 +298,8 @@
 				322EBEBE1EE64FFA00E9291D /* 5.jpg */,
 				322EBEBF1EE64FFA00E9291D /* 6.jpg */,
 			);
-			path = Resource;
+			name = Resource;
+			path = ../Resource;
 			sourceTree = "<group>";
 		};
 		32DD36C41EE5450600EE8F0D /* PagerVC */ = {
@@ -255,7 +309,8 @@
 				32DD36CB1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m */,
 				32DD36CC1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.xib */,
 			);
-			path = PagerVC;
+			name = PagerVC;
+			path = ../PagerVC;
 			sourceTree = "<group>";
 		};
 		32DD36D01EE54E0A00EE8F0D /* NaviCustom */ = {
@@ -265,7 +320,8 @@
 				32DD36D21EE54E7800EE8F0D /* NaviCustom.m */,
 				32DD36D41EE54E8800EE8F0D /* NaviCustom.xib */,
 			);
-			path = NaviCustom;
+			name = NaviCustom;
+			path = ../NaviCustom;
 			sourceTree = "<group>";
 		};
 		32DD36D71EE55AB000EE8F0D /* Utitlity */ = {
@@ -274,28 +330,18 @@
 				32DD36DA1EE55B9E00EE8F0D /* Generate.h */,
 				32DD36DB1EE55B9E00EE8F0D /* Generate.m */,
 			);
-			path = Utitlity;
+			name = Utitlity;
+			path = ../Utitlity;
 			sourceTree = "<group>";
 		};
 		32E42F411EE0321E00C66F31 = {
 			isa = PBXGroup;
 			children = (
+				327005141EE7DC8500ADD6A4 /* Controller */,
+				327005131EE7DC7600ADD6A4 /* View */,
 				322EBF091EE6B01C00E9291D /* Modal */,
-				322EBECD1EE688D400E9291D /* CustomPopUp */,
-				32BB3F5A1EE571A200F39535 /* Library */,
-				32BB3F541EE56E6C00F39535 /* CustomCell */,
-				32DD36D71EE55AB000EE8F0D /* Utitlity */,
-				32DD36D01EE54E0A00EE8F0D /* NaviCustom */,
-				322408551EE79F5700F7D01D /* PKIListImage */,
-				322EBF011EE6A87C00E9291D /* PKIZoomVC */,
-				32DD36C41EE5450600EE8F0D /* PagerVC */,
-				32DD36B51EE543BC00EE8F0D /* Resource */,
 				32E42F4C1EE0321E00C66F31 /* testObjc */,
-				32E42F661EE0321E00C66F31 /* testObjcTests */,
-				32E42F711EE0321E00C66F31 /* testObjcUITests */,
-				32E42F4B1EE0321E00C66F31 /* Products */,
-				430742AE6095A82BC5543A12 /* Pods */,
-				19FDA7E4E59F37000FBDCCAA /* Frameworks */,
+				3270051B1EE7E6A000ADD6A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,11 +353,20 @@
 				32E42F6E1EE0321E00C66F31 /* testObjcUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		32E42F4C1EE0321E00C66F31 /* testObjc */ = {
 			isa = PBXGroup;
 			children = (
+				32E42F661EE0321E00C66F31 /* testObjcTests */,
+				32E42F711EE0321E00C66F31 /* testObjcUITests */,
+				32E42F4B1EE0321E00C66F31 /* Products */,
+				430742AE6095A82BC5543A12 /* Pods */,
+				19FDA7E4E59F37000FBDCCAA /* Frameworks */,
+				32BB3F5A1EE571A200F39535 /* Library */,
+				32DD36D71EE55AB000EE8F0D /* Utitlity */,
+				32DD36B51EE543BC00EE8F0D /* Resource */,
 				32E42F501EE0321E00C66F31 /* AppDelegate.h */,
 				32E42F511EE0321E00C66F31 /* AppDelegate.m */,
 				32E42F531EE0321E00C66F31 /* ViewController.h */,
@@ -341,7 +396,7 @@
 				32E42F691EE0321E00C66F31 /* Info.plist */,
 			);
 			path = testObjcTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		32E42F711EE0321E00C66F31 /* testObjcUITests */ = {
 			isa = PBXGroup;
@@ -350,7 +405,7 @@
 				32E42F741EE0321E00C66F31 /* Info.plist */,
 			);
 			path = testObjcUITests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		430742AE6095A82BC5543A12 /* Pods */ = {
 			isa = PBXGroup;
@@ -363,6 +418,7 @@
 				8E1C9760F01DD1E44A64742F /* Pods-testObjcUITests.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +552,7 @@
 				322EBEB41EE6461D00E9291D /* PagerCellCustom.xib in Resources */,
 				327005121EE7B1A700ADD6A4 /* PKIImageCollectionViewCell.xib in Resources */,
 				32E42F5D1EE0321E00C66F31 /* LaunchScreen.storyboard in Resources */,
+				3270051A1EE7DD3100ADD6A4 /* PKIListShowAd.xib in Resources */,
 				32E42F5A1EE0321E00C66F31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +720,7 @@
 				322EBF061EE6A8B200E9291D /* PKIZoomVC.m in Sources */,
 				32DD36CD1EE54C4E00EE8F0D /* PKIPDetailMemberListViewController.m in Sources */,
 				3270050B1EE7A6ED00ADD6A4 /* PKIListImageVC.m in Sources */,
+				327005191EE7DD3100ADD6A4 /* PKIListShowAd.m in Sources */,
 				32DD36D31EE54E7800EE8F0D /* NaviCustom.m in Sources */,
 				322EBEB31EE6461D00E9291D /* PagerCellCustom.m in Sources */,
 				322EBED01EE6890000E9291D /* PKIZoomPopUp.m in Sources */,

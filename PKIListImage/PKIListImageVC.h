@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NaviCustom.h"
 
-@interface PKIListImageVC : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface PKIListImageVC : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,NavicustomDelegate>
 
 @end
