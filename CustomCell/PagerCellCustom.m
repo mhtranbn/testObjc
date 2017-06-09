@@ -19,7 +19,9 @@
     [self.slideView reloadData];
     if (_imagesArray.count > 1) {
         self.slideView.loopSlide = YES;
-        _nst_Timer = [NSTimer scheduledTimerWithTimeInterval: 2 target:self selector:@selector(onNext:) userInfo:nil repeats:YES];
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(onNext:) object:nil];
+        [self performSelector:@selector(onNext:) withObject:nil afterDelay:2];
+        
     } else {
         self.slideView.loopSlide = NO;
     }
@@ -29,10 +31,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
     self.slideView.delegate = self;
     self.slideView.dataSource = self;
     [self.slideView setPageControlHidden:YES
                                 animated:YES];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -95,7 +99,7 @@
 {
     self.numberImage.text = [NSString stringWithFormat:@"%ld / %lu", (long)index, (unsigned long)_imagesArray.count];
     self.nameImageLabel.text = [NSString stringWithFormat:@"%ld.jpg",(long)index];
-    return [NSString stringWithFormat:@"Title for %ld",index];
+    return [NSString stringWithFormat:@"Title for %ld",(long)index];
 }
 
 #pragma mark - RSlideView Delegate
@@ -103,6 +107,7 @@
 - (void)RSlideView:(RSlideView *)_slideView tapOnPageAtIndex:(NSInteger)index
 //show popup[ herre
 {
+    
     if (self.didTapImageBlock){
         self.didTapImageBlock(index);
     }
@@ -115,6 +120,8 @@
 
 - (IBAction)onNext:(id)sender
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(onNext:) object:nil];
+    [self performSelector:@selector(onNext:) withObject:nil afterDelay:2];
     [self.slideView nextPage];
 }
 

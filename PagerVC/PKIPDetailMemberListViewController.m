@@ -1,4 +1,4 @@
- //
+//
 //  PKIPDetailMemberListViewController.m
 //  testObjc
 //
@@ -15,7 +15,6 @@
 @end
 @implementation PKIPDetailMemberListViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpView];
@@ -23,15 +22,16 @@
 
 -(void)setUpView {
     naviCustom = [[NaviCustom alloc] init];
+    __weak PKIPDetailMemberListViewController *weakSelf = self;
     [naviCustom setViewWithImage:nil withBackImage:@"ic_back" withSeconImage:@"ic_next" andController:self];
     naviCustom.delegate = self;
     [naviCustom setTitel:@"List Member"];
     [self.view addSubview:naviCustom];
     naviCustom.translatesAutoresizingMaskIntoConstraints = NO;
     [naviCustom mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(0);
-        make.left.equalTo(self.view).offset(0);
-        make.right.equalTo(self.view).offset(0);
+        make.top.equalTo(weakSelf.view).offset(0);
+        make.left.equalTo(weakSelf.view).offset(0);
+        make.right.equalTo(weakSelf.view).offset(0);
         make.height.mas_equalTo(60);
     }];
     [self.tableView registerNib:[UINib nibWithNibName:@"PagerCellCustom" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PagerCellCustom"];
@@ -41,9 +41,7 @@
         image = [[UIImageView alloc] init];
         image.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",index]];
         [_imagesArray addObject:image];
-
     }
-
 }
 
 //MARK: NaviCustomDelegate
@@ -71,14 +69,15 @@
     static NSString *simpleTableIdentifier = @"PagerCellCustom";
     
     PagerCellCustom *cell =  (PagerCellCustom *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    [cell onNext:nil];
     
     if (cell == nil) {
         cell = (PagerCellCustom *)[[PagerCellCustom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-
     }
     [cell setImageArray:_imagesArray];
+    __weak PKIPDetailMemberListViewController *weakSelf = self;
     [cell setDidTapImageBlock:^(NSInteger index){
-        [self tapImage:index];
+        [weakSelf tapImage:index];
     }];
     return cell;
 }
@@ -91,7 +90,7 @@
     PKIZoomVC *controller = [[PKIZoomVC alloc] initWithNibName:@"PKIZoomVC" bundle:nil];
     [controller setData:[NSString stringWithFormat:@"%ld.jpg ",(long)index] :[NSString stringWithFormat:@"%ld / %ld ",(long)index,(long)_imagesArray.count]];
     [self.navigationController pushViewController:controller animated:NO];
-
+    
 }
 
 
@@ -103,7 +102,6 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [[(PagerCellCustom *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] nst_Timer] invalidate];
 }
 
 

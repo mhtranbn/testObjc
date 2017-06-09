@@ -32,10 +32,11 @@
     naviCustom.delegate = self;
     [self.view addSubview:naviCustom];
     naviCustom.translatesAutoresizingMaskIntoConstraints = NO;
+    __weak PKIListImageVC *weakSelf;
     [naviCustom mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(0);
-        make.left.equalTo(self.view).offset(0);
-        make.right.equalTo(self.view).offset(0);
+        make.top.equalTo(weakSelf.view).offset(0);
+        make.left.equalTo(weakSelf.view).offset(0);
+        make.right.equalTo(weakSelf.view).offset(0);
         make.height.mas_equalTo(60);
     }];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PKIImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PKIImageCollectionViewCell"];
@@ -77,7 +78,6 @@
     [_ads addClickFunction:cell.imageCollectionCell];
     [_ads addClickFunction:cell.nameImageLabel];
     [_ads addClickFunction:cell.descriptionLabel];
-    
     return cell;
 }
 
@@ -95,6 +95,7 @@
 #pragma mark - i-mobileデリゲードメソッド
 - (void)onNativeAdDataReciveCompleted:(NSString *)spotId nativeArray:(NSArray *)nativeArray{
     _ads = (ImobileSdkAdsNativeObject *)[nativeArray objectAtIndex:0];
+//    __weak PKIListImageVC *weakSelf;
     [_ads getAdImageCompleteHandler:^(UIImage *loadimg) {
         [self.collectionView reloadData];
     }];
